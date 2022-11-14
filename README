@@ -1,1 +1,12 @@
+Task Managers
 
+Members: Owen, Troy, Matt, Eric
+
+Features included:
+
+- uses holiday API to create designated holidays
+- uses Netflix API to create watchlists for users
+- uses Firebase console to allow users to log in and log out
+- Design CSS/HTML according to the design doc
+
+Schedule: 
