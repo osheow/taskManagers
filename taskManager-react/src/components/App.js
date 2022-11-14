@@ -5,6 +5,7 @@ import ArticleEntry from "./ArticleEntry";
 import { SignIn, SignOut, useAuthentication } from "../services/authService";
 import { fetchArticles, createArticle } from "../services/articleService";
 import "./App.css";
+import Calendar from "react-calendar";
 
 export default function App() {
   const [articles, setArticles] = useState([]);
@@ -35,7 +36,7 @@ export default function App() {
   return (
     <div className="App">
       <header>
-        Blog
+        Task Managers
         {user && <button onClick={() => setWriting(true)}>New Article</button>}
         {!user ? <SignIn /> : <SignOut />}
       </header>
@@ -49,6 +50,8 @@ export default function App() {
       ) : (
         <Article article={article} />
       )}
+
+      <Calendar />
     </div>
   );
 }
