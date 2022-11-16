@@ -6,13 +6,12 @@
   overflow: scroll;
 }
 
-#MontlyCalendar {
-  position: fixed;
-}
-
-#WatchList {
-  position: fixed;
-  height: -50;
+.MonthlyCalendar,
+.WatchList,
+#container {
+  display: block;
+  width: 100%;
+  height: 100%;
 }
 
 header {
