@@ -7,11 +7,11 @@
 }
 
 #MontlyCalendar {
-  position: relative;
+  position: fixed;
 }
 
 #WatchList {
-  position: relative;
+  position: fixed;
   height: -50;
 }
 
