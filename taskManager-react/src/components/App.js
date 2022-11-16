@@ -8,6 +8,7 @@ import "./App.css";
 import Calendar from "react-calendar";
 
 export default function App() {
+  const [date, setDate] = useState(new Date());
   const [articles, setArticles] = useState([]);
   const [article, setArticle] = useState(null);
   const [writing, setWriting] = useState(false);
@@ -51,7 +52,8 @@ export default function App() {
         <Article article={article} />
       )}
       <div id="container">
-        <Calendar />
+        <Calendar onChange={setDate} value={date} />
+        <div className="text-center">Selected date: {date.toDateString()}</div>
         <h3>Recommended Watchlist</h3>
       </div>
     </div>

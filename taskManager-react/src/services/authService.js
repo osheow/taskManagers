@@ -12,8 +12,9 @@ export function SignIn() {
 
 export function SignOut() {
   return (
-    <div>
-      Hello, {auth.currentUser.displayName} &nbsp;
+    <div id="signout" style={{ display: "flex", alignItems: "center" }}>
+      Hello, {auth.currentUser.displayName}{" "}
+      <img src={auth.currentUser.photoURL} height={32} /> &nbsp;
       <button onClick={() => signOut(auth)}>Sign Out</button>
     </div>
   );
