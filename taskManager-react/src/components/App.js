@@ -50,8 +50,12 @@ export default function App() {
       ) : (
         <Article article={article} />
       )}
-
-      <Calendar />
+      <div className="MonthlyCalendar">
+        <Calendar />
+      </div>
+      <div className="WatchList">
+        <h3>Recommended Watchlist</h3>
+      </div>
     </div>
   );
 }

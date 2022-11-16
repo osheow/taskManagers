@@ -6,6 +6,15 @@
   overflow: scroll;
 }
 
+#MontlyCalendar {
+  position: relative;
+}
+
+#WatchList {
+  position: relative;
+  height: -50;
+}
+
 header {
   display: flex;
   justify-content: space-between;
