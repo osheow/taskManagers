@@ -1,6 +1,10 @@
-import React, {Component} from 'react';
-import {DayPilot, DayPilotCalendar, DayPilotNavigator} from "@daypilot/daypilot-lite-react";
-import "./CalendarStyles.css";
+import React, { Component } from "react";
+import {
+  DayPilot,
+  DayPilotCalendar,
+  DayPilotNavigator
+} from "@daypilot/daypilot-lite-react";
+import "./weeklyCalendar.css";
 
 const styles = {
   wrap: {
@@ -15,7 +19,6 @@ const styles = {
 };
 
 class Calendar extends Component {
-
   constructor(props) {
     super(props);
     this.calendarRef = React.createRef();
@@ -23,11 +26,16 @@ class Calendar extends Component {
       viewType: "Week",
       durationBarVisible: false,
       timeRangeSelectedHandling: "Enabled",
-      onTimeRangeSelected: async args => {
+      onTimeRangeSelected: async (args) => {
         const dp = this.calendar;
-        const modal = await DayPilot.Modal.prompt("Create a new event:", "Event 1");
+        const modal = await DayPilot.Modal.prompt(
+          "Create a new event:",
+          "Event 1"
+        );
         dp.clearSelection();
-        if (!modal.result) { return; }
+        if (!modal.result) {
+          return;
+        }
         dp.events.add({
           start: args.start,
           end: args.end,
@@ -36,14 +44,19 @@ class Calendar extends Component {
         });
       },
       eventDeleteHandling: "Update",
-      onEventClick: async args => {
+      onEventClick: async (args) => {
         const dp = this.calendar;
-        const modal = await DayPilot.Modal.prompt("Update event text:", args.e.text());
-        if (!modal.result) { return; }
+        const modal = await DayPilot.Modal.prompt(
+          "Update event text:",
+          args.e.text()
+        );
+        if (!modal.result) {
+          return;
+        }
         const e = args.e;
         e.data.text = modal.result;
         dp.events.update(e);
-      },
+      }
     };
   }
 
@@ -52,7 +65,6 @@ class Calendar extends Component {
   }
 
   componentDidMount() {
-
     const events = [
       {
         id: 1,
@@ -80,13 +92,12 @@ class Calendar extends Component {
         start: "2023-03-06T11:30:00",
         end: "2023-03-06T14:30:00",
         backColor: "#cc4125"
-      },
+      }
     ];
 
     const startDate = "2023-03-07";
 
-    this.calendar.update({startDate, events});
-
+    this.calendar.update({ startDate, events });
   }
 
   render() {
@@ -99,7 +110,7 @@ class Calendar extends Component {
             skipMonths={3}
             startDate={"2023-03-07"}
             selectionDay={"2023-03-07"}
-            onTimeRangeSelected={ args => {
+            onTimeRangeSelected={(args) => {
               this.calendar.update({
                 startDate: args.day
               });
@@ -107,10 +118,7 @@ class Calendar extends Component {
           />
         </div>
         <div style={styles.main}>
-          <DayPilotCalendar
-            {...this.state}
-            ref={this.calendarRef}
-          />
+          <DayPilotCalendar {...this.state} ref={this.calendarRef} />
         </div>
       </div>
     );
