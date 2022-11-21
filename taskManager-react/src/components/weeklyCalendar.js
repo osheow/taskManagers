@@ -2,23 +2,23 @@ import React, { Component } from "react";
 import {
   DayPilot,
   DayPilotCalendar,
-  DayPilotNavigator
+  DayPilotNavigator,
 } from "@daypilot/daypilot-lite-react";
 import "./weeklyCalendar.css";
 
 const styles = {
   wrap: {
-    display: "flex"
+    display: "flex",
   },
   left: {
-    marginRight: "10px"
+    marginRight: "10px",
   },
   main: {
-    flexGrow: "1"
-  }
+    flexGrow: "1",
+  },
 };
 
-class Calendar extends Component {
+class WCalendar extends Component {
   constructor(props) {
     super(props);
     this.calendarRef = React.createRef();
@@ -40,7 +40,7 @@ class Calendar extends Component {
           start: args.start,
           end: args.end,
           id: DayPilot.guid(),
-          text: modal.result
+          text: modal.result,
         });
       },
       eventDeleteHandling: "Update",
@@ -56,7 +56,7 @@ class Calendar extends Component {
         const e = args.e;
         e.data.text = modal.result;
         dp.events.update(e);
-      }
+      },
     };
   }
 
@@ -70,29 +70,29 @@ class Calendar extends Component {
         id: 1,
         text: "Event 1",
         start: "2023-03-07T10:30:00",
-        end: "2023-03-07T13:00:00"
+        end: "2023-03-07T13:00:00",
       },
       {
         id: 2,
         text: "Event 2",
         start: "2023-03-08T09:30:00",
         end: "2023-03-08T11:30:00",
-        backColor: "#6aa84f"
+        backColor: "#6aa84f",
       },
       {
         id: 3,
         text: "Event 3",
         start: "2023-03-08T12:00:00",
         end: "2023-03-08T15:00:00",
-        backColor: "#f1c232"
+        backColor: "#f1c232",
       },
       {
         id: 4,
         text: "Event 4",
         start: "2023-03-06T11:30:00",
         end: "2023-03-06T14:30:00",
-        backColor: "#cc4125"
-      }
+        backColor: "#cc4125",
+      },
     ];
 
     const startDate = "2023-03-07";
@@ -112,7 +112,7 @@ class Calendar extends Component {
             selectionDay={"2023-03-07"}
             onTimeRangeSelected={(args) => {
               this.calendar.update({
-                startDate: args.day
+                startDate: args.day,
               });
             }}
           />
@@ -125,4 +125,4 @@ class Calendar extends Component {
   }
 }
 
-export default Calendar;
+export default WCalendar;

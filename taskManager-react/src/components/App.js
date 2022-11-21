@@ -6,6 +6,7 @@ import { SignIn, SignOut, useAuthentication } from "../services/authService";
 import { fetchArticles, createArticle } from "../services/articleService";
 import "./App.css";
 import Calendar from "react-calendar";
+import WCalendar from "./weeklyCalendar";
 
 export default function App() {
   const [date, setDate] = useState(new Date());
@@ -52,9 +53,8 @@ export default function App() {
         <Article article={article} />
       )}
       <div id="container">
-        <Calendar onChange={setDate} value={date} />
-        <div className="text-center">Selected date: {date.toDateString()}</div>
         <h3>Recommended Watchlist</h3>
+        <WCalendar />
       </div>
     </div>
   );
