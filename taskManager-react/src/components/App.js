@@ -54,8 +54,8 @@ export default function App() {
       )}
       <div id="container">
         <h3>Recommended Watchlist</h3>
-        <WCalendar />
       </div>
+      <WCalendar />
     </div>
   );
 }
