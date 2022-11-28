@@ -39,7 +39,7 @@ export default function App() {
     <div className="App">
       <header>
         Task Managers
-        {user && <button onClick={() => setWriting(true)}>New Article</button>}
+        {user && <button onClick={() => setWriting(true)}>New Event</button>}
         {!user ? <SignIn /> : <SignOut />}
       </header>
 
