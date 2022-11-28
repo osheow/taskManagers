@@ -10,6 +10,9 @@ import WCalendar from "./weeklyCalendar";
 
 export default function App() {
   const [date, setDate] = useState(new Date());
+  const [event, setEvent] = useState([]);
+  const [information, setInformation] = useState([]);
+  const [categories, setCategories] = useState([]);
   const [articles, setArticles] = useState([]);
   const [article, setArticle] = useState(null);
   const [writing, setWriting] = useState(false);
@@ -52,10 +55,12 @@ export default function App() {
       ) : (
         <Article article={article} />
       )}*/}
-      <div id="container">
+      <div id="container-left">
         <h3>Recommended Watchlist</h3>
       </div>
-      <WCalendar />
+      <div id="container-right">
+        <WCalendar />
+      </div>
     </div>
   );
 }

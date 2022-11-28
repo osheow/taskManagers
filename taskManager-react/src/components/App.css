@@ -57,6 +57,7 @@ article .body {
   padding: 5px;
 }
 
-.WCalendar{
+.WCalendar {
   background-color: red;
+  height: auto;
 }
