@@ -43,7 +43,7 @@ export default function App() {
         {!user ? <SignIn /> : <SignOut />}
       </header>
 
-      {!user ? "" : <Nav articles={articles} setArticle={setArticle} />}
+      {/*{!user ? "" : <Nav articles={articles} setArticle={setArticle} />}
 
       {!user ? (
         ""
@@ -51,7 +51,7 @@ export default function App() {
         <ArticleEntry addArticle={addArticle} />
       ) : (
         <Article article={article} />
-      )}
+      )}*/}
       <div id="container">
         <h3>Recommended Watchlist</h3>
       </div>
