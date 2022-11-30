@@ -17,10 +17,12 @@ export default function App() {
   const [article, setArticle] = useState(null);
   const [writing, setWriting] = useState(false);
   const user = useAuthentication();
+  /*
   const [todos, setTodos] = useState([
     { id: 1, content: "Meet Masao for Udon" },
     { id: 2, content: "Fix up these horrible React notes" },
   ]);
+  */
 
   // This is a trivial app, so just fetch all the articles only when
   // a user logs in. A real app would do pagination. Note that
@@ -34,10 +36,10 @@ export default function App() {
 
   // Update the "database" *then* update the internal React state. These
   // two steps are definitely necessary.
-  function addEvent({ id, text, start, end }) {
-    createEvent({ id, text, start, end }).then((event) => {
-      setEvent(event);
-      setEvents([event, ...events]);
+  function addArticle({ id, text, start, end }) {
+    createArticle({ id, text, start, end }).then((event) => {
+      setArticle(event);
+      setArticles([event, ...event]);
       setWriting(false);
     });
   }
