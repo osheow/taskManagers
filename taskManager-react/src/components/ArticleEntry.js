@@ -5,7 +5,8 @@ export default function ArticleEntry({ addArticle }) {
   const [title, setTitle] = useState("");
   const [body, setBody] = useState("");
   const [error, setError] = useState(null);
-  const [time, setTime] = useState("");
+  const [startTime, setStartTime] = useState("");
+  const [endTime, setEndTime] = useState("");
 
   function submit(e) {
     setError(null);
@@ -23,8 +24,10 @@ export default function ArticleEntry({ addArticle }) {
         {error && <p className="error">{error}</p>}
         Name of event
         <input value={title} onChange={(e) => setTitle(e.target.value)} />
-        Extra information/Time Interval of Event
-        <TimePicker value={time} onChange={setTime} />
+        Start time
+        <TimePicker value={startTime} onChange={setStartTime} />
+        End time
+        <TimePicker value={endTime} onChange={setEndTime} />
         {/*<textarea
           rows="8"
           value={body}

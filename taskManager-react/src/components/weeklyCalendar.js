@@ -5,6 +5,8 @@ import {
   DayPilotNavigator,
 } from "@daypilot/daypilot-lite-react";
 import "./weeklyCalendar.css";
+import articleEntry from "./ArticleEntry.js";
+import app from "./App.js";
 
 const styles = {
   wrap: {
@@ -68,7 +70,7 @@ class WCalendar extends Component {
     //ALL IN USESTATE, make events a state variable.
     //make a collection in firestore called events, and write these events into firestore
     //blog can be helpful for this
-    
+
     const events = [
       {
         id: 1,
@@ -102,10 +104,7 @@ class WCalendar extends Component {
     const startDate = "2023-03-07";
 
     this.calendar.update({ startDate, events });
-
   }
-
-  
 
   render() {
     return (
