@@ -54,7 +54,7 @@ export default function App() {
         {user && <button onClick={() => setWriting(true)}>New Event</button>}
         {!user ? <SignIn /> : <SignOut />}
       </header>
-
+      
       {!user ? "" : <Nav articles={articles} setArticle={setArticle} />}
 
       {!user ? (
