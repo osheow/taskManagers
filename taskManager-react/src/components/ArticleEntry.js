@@ -1,5 +1,5 @@
 import { useState } from "react";
-import TimePicker from "react-time-picker";
+import TimePicker from "react-dropdown-timepicker";
 
 export default function ArticleEntry({ addArticle }) {
   const [title, setTitle] = useState("");
