@@ -1,9 +1,11 @@
 import { useState } from "react";
+import TimePicker from "react-time-picker";
 
 export default function ArticleEntry({ addArticle }) {
   const [title, setTitle] = useState("");
   const [body, setBody] = useState("");
   const [error, setError] = useState(null);
+  const [time, setTime] = useState("");
 
   function submit(e) {
     setError(null);
@@ -22,11 +24,12 @@ export default function ArticleEntry({ addArticle }) {
         Name of event
         <input value={title} onChange={(e) => setTitle(e.target.value)} />
         Extra information/Time Interval of Event
-        <textarea
+        <TimePicker value={time} onChange={setTime} />
+        {/*<textarea
           rows="8"
           value={body}
           onChange={(e) => setBody(e.target.value)}
-        ></textarea>
+  ></textarea>*/}
         <button type="submit">Create</button>
       </form>
     </div>

@@ -50,18 +50,8 @@ export default function App() {
         Task Managers
         {user && <button onClick={() => setWriting(true)}>New Event</button>}
         {!user ? <SignIn /> : <SignOut />}
-        {!user ? "" : <Nav articles={articles} setArticle={setArticle} />}
-        {!user ? (
-          ""
-        ) : writing ? (
-          <ArticleEntry addArticle={addArticle} />
-        ) : (
-          <Article article={article} />
-        )}
       </header>
-<<<<<<< HEAD
-=======
-      
+
       {!user ? "" : <Nav articles={articles} setArticle={setArticle} />}
 
       {!user ? (
@@ -71,7 +61,6 @@ export default function App() {
       ) : (
         <Article article={article} />
       )}
->>>>>>> 62ac7517315f5b53b62f97570160dc7152ca3c82
 
       <div id="container-left">
         <h3>Recommended Watchlist</h3>
