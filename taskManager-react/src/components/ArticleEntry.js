@@ -21,7 +21,7 @@ export default function ArticleEntry({ addArticle }) {
         {error && <p className="error">{error}</p>}
         Name of event
         <input value={title} onChange={(e) => setTitle(e.target.value)} />
-        Extra information
+        Extra information/Time Interval of Event
         <textarea
           rows="8"
           value={body}
