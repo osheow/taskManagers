@@ -11,7 +11,7 @@ export default function ArticleEntry({ addArticle }) {
   function submit(e) {
     setError(null);
     e.preventDefault();
-    if (!title.trim() || !body.trim()) {
+    if (!title.trim() || !startTime.trim() || endTime.trim()) {
       setError("Both the title and body must be supplied");
     } else {
       addArticle({ title, body });
