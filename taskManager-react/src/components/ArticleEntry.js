@@ -25,9 +25,17 @@ export default function ArticleEntry({ addArticle }) {
         Name of event
         <input value={title} onChange={(e) => setTitle(e.target.value)} />
         Start time
-        <TimePicker value={startTime} onChange={setStartTime} />
+        <input
+          type="time"
+          value={startTime}
+          onChange={(e) => setStartTime(e.target.value)}
+        />
         End time
-        <TimePicker value={endTime} onChange={setEndTime} />
+        <input
+          type="time"
+          value={endTime}
+          onChange={(e) => setEndTime(e.target.value)}
+        />
         {/*<textarea
           rows="8"
           value={body}

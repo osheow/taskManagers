@@ -36,8 +36,8 @@ export default function App() {
 
   // Update the "database" *then* update the internal React state. These
   // two steps are definitely necessary.
-  function addArticle({ id, text, start, end }) {
-    createArticle({ id, text, start, end }).then((event) => {
+  function addArticle({ title, startTime, endTime }) {
+    createArticle({ title, startTime, endTime }).then((event) => {
       setArticle(event);
       setArticles([event, ...event]);
       setWriting(false);
