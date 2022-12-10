@@ -7,6 +7,7 @@ import {
 import "./weeklyCalendar.css";
 import articleEntry from "./ArticleEntry.js";
 import app from "./App.js";
+import randomColor from "randomcolor";
 
 const styles = {
   wrap: {
@@ -32,7 +33,7 @@ class WCalendar extends Component {
         const dp = this.calendar;
         const modal = await DayPilot.Modal.prompt(
           "Create a new event:",
-          "Event 1"
+          "New event"
         );
         dp.clearSelection();
         if (!modal.result) {
@@ -43,6 +44,7 @@ class WCalendar extends Component {
           end: args.end,
           id: DayPilot.guid(),
           text: modal.result,
+          backColor: randomColor(),
         });
       },
       eventDeleteHandling: "Update",
@@ -77,6 +79,7 @@ class WCalendar extends Component {
         text: "Event 1",
         start: "2023-03-07T08:30:00",
         end: "2023-03-07T13:00:00",
+        backColor: "#B8F2E6",
       },
       {
         id: 2,
