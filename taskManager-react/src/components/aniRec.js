@@ -11,8 +11,8 @@ const Anirec = () => {
 
 return(
     <div>
-    <h4>{anime?.title}</h4>
-    <img src={anime?.image_url} alt={anime?.title} />
+    <h4>{anime?.data?.title}</h4>
+    <img src={anime?.data?.images?.jpg?.image_url} alt={anime?.data?.title} />
     </div>
 );
 };
