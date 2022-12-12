@@ -73,6 +73,8 @@ class WCalendar extends Component {
     //make a collection in firestore called events, and write these events into firestore
     //blog can be helpful for this
 
+    {
+      /*
     const events = [
       {
         id: 1,
@@ -103,10 +105,12 @@ class WCalendar extends Component {
         backColor: "#cc4125",
       },
     ];
+  */
+    }
 
     const startDate = "2023-03-07";
 
-    this.calendar.update({ startDate, events });
+    //this.calendar.update({ startDate, events });
   }
 
   render() {
