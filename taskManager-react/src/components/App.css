@@ -4,7 +4,6 @@
   grid-template-columns: 250px auto;
   height: 100vh;
   overflow: scroll;
-  
 }
 
 header {
@@ -29,14 +28,17 @@ form textarea {
   width: 300px;
 }
 
-nav,
-article {
+nav {
+  /*article {
   height: 100%;
   padding: 10px;
+}*/
 }
 
 nav {
-  background-color: #dee9ff;
+  background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSnRgBUi4q0xaEHVGlje5QO2qoySCPLoP76Dw&usqp=CAU");
+  height: 20px;
+  width: 20px;
 }
 
 nav p:hover {
@@ -62,7 +64,7 @@ article .body {
   background-color: red;
 }
 
-.container-left{
+.container-left {
   background-color: white;
   display: flex;
   flex-direction: column;

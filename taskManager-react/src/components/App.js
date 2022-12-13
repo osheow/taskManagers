@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import React from 'react';
+import React from "react";
 import Nav from "./Nav";
 import Article from "./Article";
 import ArticleEntry from "./ArticleEntry";
@@ -8,8 +8,7 @@ import { fetchArticles, createArticle } from "../services/articleService";
 import "./App.css";
 import Calendar from "react-calendar";
 import WCalendar from "./weeklyCalendar";
-import Anirec from './aniRec.js';
-
+import Anirec from "./aniRec.js";
 
 export default function App() {
   const [date, setDate] = useState(new Date());
@@ -47,7 +46,6 @@ export default function App() {
     });
   }
 
-
   return (
     <div className="App">
       <header>
@@ -56,7 +54,15 @@ export default function App() {
         {!user ? <SignIn /> : <SignOut />}
       </header>
 
-      {!user ? "" : <Nav articles={articles} setArticle={setArticle} />}
+      {!user ? (
+        ""
+      ) : (
+        <img
+          height="150"
+          src="https://i.pinimg.com/564x/46/cd/20/46cd20a33efe24abce136ee09cea122a.jpg"
+        ></img>
+      )}
+      {/*<Nav articles={articles} setArticle={setArticle} />*/}
 
       {!user ? (
         ""
