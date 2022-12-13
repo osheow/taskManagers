@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import React from 'react';
 import Nav from "./Nav";
 import Article from "./Article";
 import ArticleEntry from "./ArticleEntry";
@@ -7,6 +8,8 @@ import { fetchArticles, createArticle } from "../services/articleService";
 import "./App.css";
 import Calendar from "react-calendar";
 import WCalendar from "./weeklyCalendar";
+import Anirec from './aniRec.js';
+
 
 export default function App() {
   const [date, setDate] = useState(new Date());
@@ -44,6 +47,7 @@ export default function App() {
     });
   }
 
+
   return (
     <div className="App">
       <header>
@@ -64,6 +68,7 @@ export default function App() {
 
       <div id="container-left">
         <h3>Recommended Watchlist</h3>
+        <Anirec />
       </div>
       <div id="container-right">
         <WCalendar />

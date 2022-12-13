@@ -4,6 +4,7 @@
   grid-template-columns: 250px auto;
   height: 100vh;
   overflow: scroll;
+  
 }
 
 header {
@@ -59,4 +60,11 @@ article .body {
 
 .WCalendar {
   background-color: red;
+}
+
+.container-left{
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
