@@ -49,9 +49,11 @@ export default function App() {
   return (
     <div className="App">
       <header>
-        Task Managers
+        <div className="title">
+          <h3 id="titleHead">Task Managers</h3>
+        </div>
         {/*{user && <button onClick={() => setWriting(true)}>New Event</button>}*/}
-        {!user ? <SignIn /> : <SignOut />}
+        <div className="signIn">{!user ? <SignIn /> : <SignOut />}</div>
       </header>
 
       {!user ? (

@@ -9,6 +9,7 @@
 header {
   display: flex;
   justify-content: space-between;
+  align-content: flex-start;
   background-color: black;
   color: white;
   grid-column: 1 / span 2;
@@ -37,8 +38,6 @@ nav {
 
 nav {
   background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSnRgBUi4q0xaEHVGlje5QO2qoySCPLoP76Dw&usqp=CAU");
-  height: 20px;
-  width: 20px;
 }
 
 nav p:hover {
