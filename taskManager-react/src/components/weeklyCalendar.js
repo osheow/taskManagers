@@ -8,6 +8,8 @@ import "./weeklyCalendar.css";
 import articleEntry from "./ArticleEntry.js";
 import app from "./App.js";
 import randomColor from "randomcolor";
+import { doc, setDoc } from "firebase/firestore";
+import { auth, db } from "../firebaseConfig.js";
 
 const styles = {
   wrap: {
@@ -39,12 +41,24 @@ class WCalendar extends Component {
         if (!modal.result) {
           return;
         }
-        dp.events.add({
+        const event = {
           start: args.start,
           end: args.end,
           id: DayPilot.guid(),
           text: modal.result,
           backColor: randomColor(),
+        };
+
+        dp.events.add(event);
+
+        // Add a new document in collection "cities"
+        await setDoc(doc(db, "events", event.id), {
+          start: `${event.start}`,
+          end: `${event.end}`,
+          id: `${event.id}`,
+          text: `${event.text}`,
+          backColor: `${event.backColor}`,
+          userID: auth.currentUser.uid,
         });
       },
       eventDeleteHandling: "Update",

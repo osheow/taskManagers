@@ -1,4 +1,4 @@
-export default function Nav({ articles, setArticle }) {
+{/*export default function Nav({ articles, setArticle }) {
   return (
     <nav>
       {!articles
@@ -10,4 +10,4 @@ export default function Nav({ articles, setArticle }) {
           ))}
     </nav>
   );
-}
+}*/}

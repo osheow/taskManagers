@@ -49,6 +49,7 @@ export default function App() {
   return (
     <div className="App">
       <header>
+        <div className="first"></div>
         <div className="title">
           <h3 id="titleHead">Task Managers</h3>
         </div>
@@ -79,7 +80,7 @@ export default function App() {
         <Anirec />
       </div>
       <div id="container-right">
-        <WCalendar />
+        {user ? <WCalendar /> : "Sign in to view your calendar."}
       </div>
     </div>
   );
