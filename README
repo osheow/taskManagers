@@ -6,11 +6,12 @@ Links:
 
 https://docs.google.com/document/d/1p3OUEBWV4UB_5cT0LbDQOPv-ccoUeJeilZJty61NIB4/edit#heading=h.1xxei6g8i4ri
 
+Firebase Hosting: https://taskmanagers-e7d31.web.app
+
 Features included:
 
 - uses holiday API to create designated holidays
-- uses Netflix API to create watchlists for users
+- uses Anime API to create watchlists for users
 - uses Firebase console to allow users to log in and log out
 - Design CSS/HTML according to the design doc
 
-Schedule: 
